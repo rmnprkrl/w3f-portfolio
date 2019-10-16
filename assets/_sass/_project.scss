@@ -85,6 +85,14 @@ $project-gutter: 25vh;
 	}
 }
 
+.project--art {
+	video {
+		padding-left: 15px;
+		width: 100%;
+		height: auto;
+	}
+}
+
 .project-grid {
 	display: flex;
 	flex-flow: row wrap;
