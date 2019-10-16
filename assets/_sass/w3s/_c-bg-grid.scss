@@ -8,16 +8,6 @@
 	top: 50%;
 	overflow: hidden;
 
-	.is-interaction2 & {
-		opacity: 1 !important;
-		display: block !important;
-	}
-
-	.is-interaction3 & {
-		opacity: 1 !important;
-		display: block !important;
-	}
-
 	&__container {
 		position: absolute;
 		width: 100%;
@@ -33,35 +23,6 @@
 		&--static {
 			opacity: 0;
 			background-color: black;
-		}
-	}
-
-	&__mask {
-		width: 5 * $unit - 1px;
-		height: 5 * $unit - 1px;
-		position: relative;
-		background: url(/assets/images/w3s-intro/grid-21x21px-offset.png) repeat;
-		z-index: 1000;
-		display: none;
-		.is-interaction2 & {
-			display: block;
-		}
-	}
-
-	&__mask-vh {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		opacity: 1;
-
-		&.is-vertical {
-			background: url(/assets/images/w3s-intro/mask-v-210.png) -7px 0 repeat;
-		}
-
-		&.is-horizontal {
-			background: url(/assets/images/w3s-intro/mask-h-210.png) 0 -7px repeat;
 		}
 	}
 }
