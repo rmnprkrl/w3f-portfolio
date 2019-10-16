@@ -1,0 +1,33 @@
+html,
+body {
+	background: black;
+	animation: colorchange 50s;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+@keyframes colorchange {
+	0% {
+		background: black;
+	}
+	25% {
+		background: #0e0e0e;
+	}
+	50% {
+		background: #161616;
+	}
+	75% {
+		background: #0e0e0e;
+	}
+	100% {
+		background: black;
+	}
+}

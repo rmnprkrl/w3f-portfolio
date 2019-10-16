@@ -1,0 +1,18 @@
+.intro-body {
+	background: black;
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.intro-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+}

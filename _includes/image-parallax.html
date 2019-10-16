@@ -1,0 +1,10 @@
+{% if image_parallax %}
+    {% assign image = image_parallax %}
+{% else %}
+    {% if page.image %}
+        {% assign image = page.image %}
+    {% else %}
+        {% assign image = site.home_parallax %}
+    {% endif %}
+{% endif %}
+<img class="parallax" src="{{ site.baseurl }}{{ site.image_url }}{{ image.src }}-{{ site.srcset_width[0]['name'] }}.{{ image.ext }}" srcset="{% for size in site.srcset_width %}{{ site.baseurl }}{{ site.image_url }}{{ image.src }}-{{ size['name'] }}.{{ image.ext }} {{ size['width'] }}w{% if forloop.last == false %}, {% endif %}{% endfor %}" alt="{{ image.alt }}"/>

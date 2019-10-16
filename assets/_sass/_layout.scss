@@ -1,0 +1,11 @@
+.site-header {
+	position: fixed;
+	padding: ($padding / 2) $padding;
+	// z-index: 10000;
+
+	span {
+		padding-right: $padding;
+		// -webkit-filter: invert(100%);
+		// filter: invert(100%);
+	}
+}

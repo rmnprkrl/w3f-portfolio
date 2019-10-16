@@ -1,0 +1,117 @@
+.c-intro {
+	color: white;
+	width: 100%;
+	position: relative;
+	background: black;
+
+	&__wrapper {
+		align-content: space-between;
+		padding: $padding * 4;
+	}
+
+	@include mappy-bp(h max-height 600px) {
+		height: auto;
+
+		&__wrapper {
+			height: auto;
+		}
+	}
+}
+
+.c-intro-headline {
+	z-index: 1;
+	font-size: 24px;
+	line-height: 31px;
+	position: relative;
+	font-weight: bold;
+
+	@include mappy-bp(small) {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	@include mappy-bp(large) {
+		font-size: 4.4vw;
+		line-height: 4.8vw;
+	}
+
+	@include mappy-bp(1400px) {
+		font-size: 60px;
+		line-height: 74px;
+	}
+
+	span {
+		display: inline-block;
+		opacity: 0;
+		transition: opacity 0.1s ease-in;
+		cursor: default;
+
+		padding-right: 8px;
+
+		@include mappy-bp(small) {
+			padding-right: 9px;
+		}
+
+		@include mappy-bp(large) {
+			padding-right: 1.3vw;
+		}
+
+		@include mappy-bp(1400px) {
+			padding-right: 1rem;
+		}
+
+		&.is-visible {
+			opacity: 1;
+		}
+	}
+
+	&__quote {
+		display: none;
+
+		@include mappy-bp(large) {
+			max-width: 90%;
+		}
+
+		&.is-active {
+			display: block;
+		}
+	}
+}
+
+.c-intro-parallax {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	text-align: center;
+	overflow: hidden;
+
+	img {
+		transform: scale(1.6);
+		display: inline-block;
+		height: 100%;
+		width: auto;
+		opacity: 0;
+		max-width: none;
+		max-height: none;
+
+		@include mappy-bp(large) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.simpleParallax {
+		height: calc(100vh - var(--vh-offset));
+
+		img {
+			opacity: 1;
+		}
+
+		@include mappy-bp(h max-height 600px) {
+			height: auto;
+		}
+	}
+}
