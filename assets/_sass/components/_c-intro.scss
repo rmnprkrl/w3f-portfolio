@@ -6,7 +6,11 @@
 
 	&__wrapper {
 		align-content: space-between;
-		padding: $padding * 4;
+		padding: $padding/1;
+
+		@include mappy-bp(large) {
+			padding: $padding * 4;
+		}
 	}
 
 	@include mappy-bp(h max-height 600px) {

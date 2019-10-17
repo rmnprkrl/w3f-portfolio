@@ -1,11 +1,13 @@
 .site-header {
 	position: fixed;
-	padding: ($padding / 2) $padding;
-	// z-index: 10000;
+	padding: ($padding / 2) $padding / 2;
+
+	@include mappy-bp(large) {
+		padding: ($padding / 2) $padding;
+	}
 
 	span {
 		padding-right: $padding;
-		// -webkit-filter: invert(100%);
-		// filter: invert(100%);
+		line-height: 18px;
 	}
 }

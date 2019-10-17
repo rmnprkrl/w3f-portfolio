@@ -4,9 +4,18 @@ $project-gutter: 25vh;
 	&__header {
 		position: sticky;
 		top: $project-gutter;
-		max-width: 33.333%;
-		padding: 0 $padding 4px $padding;
-		font-size: 20px;
+		max-width: 100%;
+		padding: 0 $padding / 2 4px $padding / 2;
+		font-size: 18px;
+
+		@include mappy-bp(large) {
+			font-size: 20px;
+		}
+
+		@include mappy-bp(large) {
+			max-width: 33.333%;
+			padding: 0 $padding 4px $padding;
+		}
 	}
 
 	&__content {
@@ -17,7 +26,11 @@ $project-gutter: 25vh;
 			max-width: 1600px;
 
 			.project-item {
-				padding: 0 $padding;
+				padding: 0 $padding / 2;
+
+				@include mappy-bp(large) {
+					padding: 0 $padding;
+				}
 			}
 		}
 
@@ -37,7 +50,9 @@ $project-gutter: 25vh;
 	}
 
 	&:last-of-type {
-		margin-bottom: 0;
+		@include mappy-bp(large) {
+			margin-bottom: 0;
+		}
 	}
 
 	margin-bottom: $project-gutter;
@@ -51,12 +66,20 @@ $project-gutter: 25vh;
 
 .project--blenderkit {
 	.project-item--video {
-		padding: $padding * 2;
+		padding: 0;
 		background: #121212;
+
+		@include mappy-bp(large) {
+			padding: $padding * 2;
+		}
 
 		.project-video-wrapper {
 			max-width: 900px;
 			margin: 0 auto;
+
+			@include mappy-bp(1700px) {
+				max-width: 1400px;
+			}
 		}
 	}
 }
@@ -64,12 +87,20 @@ $project-gutter: 25vh;
 .project--acud {
 	.project-item:nth-child(2) {
 		img {
-			padding: 0 33.1%;
+			padding-right: 33.1%;
+
+			@include mappy-bp(large) {
+				padding: 0 33.1%;
+			}
 		}
 	}
 	.project-item:nth-child(3) {
 		img {
-			padding-right: 50.5%;
+			padding-right: 33.1%;
+
+			@include mappy-bp(large) {
+				padding-right: 50.5%;
+			}
 		}
 	}
 }
@@ -87,9 +118,12 @@ $project-gutter: 25vh;
 
 .project--art {
 	video {
-		padding-left: 15px;
 		width: 100%;
 		height: auto;
+
+		@include mappy-bp(large) {
+			padding-left: 15px;
+		}
 	}
 }
 
@@ -98,12 +132,16 @@ $project-gutter: 25vh;
 	flex-flow: row wrap;
 
 	&__item {
-		flex: 0 0 50%;
 		padding: 0 $padding;
 		margin-bottom: $project-gutter;
+		flex: 0 0 100%;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		@include mappy-bp(large) {
+			flex: 0 0 50%;
 		}
 	}
 }
