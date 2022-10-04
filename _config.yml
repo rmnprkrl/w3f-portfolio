@@ -16,7 +16,7 @@
 title: "Roman Přikryl"
 email: mail@romanprikryl.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Selected projects 2016 - 2019
+  Selected projects 2016 - 2020
 baseurl: "/www" # the subpath of your site, e.g. /blog
 url: "https://rmnprkrl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
